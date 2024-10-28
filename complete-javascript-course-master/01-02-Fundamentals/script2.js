@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /* This is the strict mode. It has to be on the first line of the code (like a shebang line).
 Strict mode changes some previously-accepted mistakes into errors.
 */
@@ -15,13 +15,13 @@ Strict mode changes some previously-accepted mistakes into errors.
 // const private = 534; // This is the same error as previous.
 
 console.log(
-  "################################## Functions #################################"
+  '################################## Functions #################################'
 );
 
 // Example 1. Normal function without any parameter and no return.
 // This is a function declaration, because we use the keyword 'function'.
 function logger() {
-  console.log("[INFO] My name is Cip.");
+  console.log('[INFO] My name is Cip.');
 }
 
 // Example 2. Normal function with parameters and return.
@@ -31,11 +31,11 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 
-console.log("[Example 1] Calling a simple function... ");
+console.log('[Example 1] Calling a simple function... ');
 // Calling / Running / Invoking the function.
 logger();
 
-console.log("[Example 2] Calling a function with parameters and return...");
+console.log('[Example 2] Calling a function with parameters and return...');
 const myJuice = fruitProcessor(5, 0); // Assign to a variable the return of the function.
 console.log(`My fruit processor returned: ${myJuice}`);
 
@@ -43,13 +43,13 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(`My fruit processor returned again: ${appleOrangeJuice}`);
 
 console.log(
-  "################### Function declarations vs Expressions #############################"
+  '################### Function declarations vs Expressions #############################'
 );
 
 console.log(
-  "The main practical difference is that we can actually call function declarations before they are defined in the code."
+  'The main practical difference is that we can actually call function declarations before they are defined in the code.'
 );
-console.log("The function expressions we cannot call before they are defined.");
+console.log('The function expressions we cannot call before they are defined.');
 /* Example 1. Function Declaration. */
 function calcAge(birthYear) {
   // Function parameter.
@@ -70,9 +70,9 @@ console.log(`My age: ${myAge}`);
 const age2 = calcAge2;
 console.log(`My age through an anonymous function: ${age2}`);
 
-console.log("################### Arrow Functions ###################");
+console.log('################### Arrow Functions ###################');
 console.log(
-  "An arrow function is basically a function expression that is shorter and faster to write."
+  'An arrow function is basically a function expression that is shorter and faster to write.'
 );
 
 // Example 3. Arrow Function.
@@ -80,7 +80,7 @@ const calcAge3 = (birthYear) => 2024 - birthYear;
 
 /* Another example of an arrow function without any parameter. */
 const myTestArrow = () => {
-  console.log("This is a weird expression of a function...");
+  console.log('This is a weird expression of a function...');
 };
 myTestArrow();
 
@@ -91,11 +91,11 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   const retirement = 65 - age;
   return `[Arrow Functions] ${firstName} retires in: ${retirement} years.`;
 };
-console.log(yearsUntilRetirement(1996, "Cip"));
-console.log(yearsUntilRetirement(1980, "Bob"));
+console.log(yearsUntilRetirement(1996, 'Cip'));
+console.log(yearsUntilRetirement(1980, 'Bob'));
 
 console.log(
-  "################### Functions Calling other Functions ###################"
+  '################### Functions Calling other Functions ###################'
 );
 
 function cutFruitPieces(fruit) {
@@ -110,7 +110,7 @@ function fruitProcessor1(apples, oranges) {
 }
 console.log(fruitProcessor1(2, 3));
 
-console.log("################### Reviewing Functions ###################");
+console.log('################### Reviewing Functions ###################');
 
 const calcAge4 = function (year) {
   return 2024 - year;
@@ -128,10 +128,10 @@ const yearsUntilRetirement1 = function (birthYear, firstName) {
   }
 };
 
-console.log(yearsUntilRetirement1(1996, "Cip"));
-console.log(yearsUntilRetirement1(1950, "Mike"));
+console.log(yearsUntilRetirement1(1996, 'Cip'));
+console.log(yearsUntilRetirement1(1950, 'Mike'));
 
-console.log("################### Coding Challenge 1 ###################");
+console.log('################### Coding Challenge 1 ###################');
 
 // function checkWinner(avgDolphins, avgKoalas) {
 //     if (avgDolphins >= avgKoalas * 2) {
@@ -160,15 +160,15 @@ console.log("################### Coding Challenge 1 ###################");
 // /* Test 2. Check Winner. */
 // checkWinner(scoreDolphins, scoreKoalas);
 
-console.log("################### Introduction to Arrays ################### ");
+console.log('################### Introduction to Arrays ################### ');
 
 console.log(
-  "[Introduction to Arrays] Two most important data structures in javascript: Arrays and Objects. "
+  '[Introduction to Arrays] Two most important data structures in javascript: Arrays and Objects. '
 );
-console.log("An array can hold any value type we want.");
+console.log('An array can hold any value type we want.');
 
 /* This is called the literal syntax. */
-const friends = ["Michael", "Steven", "Peter"];
+const friends = ['Michael', 'Steven', 'Peter'];
 console.log(`[First method] My first array of friends: ${friends}`);
 
 const years = new Array(1991, 1984, 2008, 2020);
@@ -183,30 +183,30 @@ console.log(
 
 /* Get the lenght of the array. */
 console.log(`${friends} array contains: ${friends.length} elements.`);
-console.log(".lenght is called a property.");
+console.log('.lenght is called a property.');
 
 /* Arrays are mutable. Replace element by index example. */
 /* Only primitive values are immutable. */
 console.log(`[Replacing by index example] Original array: ${friends}`);
 console.log(`Replacing ${friends[friends.length - 1]}...`);
-friends[2] = "Jay";
+friends[2] = 'Jay';
 console.log(`[Replacing by index example] After replacement: ${friends}`);
 console.log(friends);
 
-console.log("We cannot replace the full array...");
+console.log('We cannot replace the full array...');
 // friends = ["Something", 3, 2, 1, true];
 
 const differentDataTypes = [
   13,
-  "Michael",
+  'Michael',
   true,
   false,
-  "31",
+  '31',
   2017 - 33,
   [2, 3, 4],
-  friends
+  friends,
 ];
-console.log("[Different data types] An array can hold all data types:");
+console.log('[Different data types] An array can hold all data types:');
 console.log(differentDataTypes);
 
 // Exercise
@@ -218,36 +218,36 @@ const years1 = [1990, 1967, 2002, 2010, 2018];
 const ages = [
   calcAge5(years1[0]),
   calcAge5(years1[1]),
-  calcAge5(years[years.length - 1])
+  calcAge5(years[years.length - 1]),
 ];
 console.log(ages);
 
-console.log("################### Basic Array Operations ###################");
+console.log('################### Basic Array Operations ###################');
 
-const friends2 = ["Michael", "Steven", "Peter"];
+const friends2 = ['Michael', 'Steven', 'Peter'];
 
 /* Push an item in the array. */
-console.log("[Push Method] Syntax: array.push()");
+console.log('[Push Method] Syntax: array.push()');
 console.log(
-  "[Push Method] Append an item to the array and return the lenght of the array."
+  '[Push Method] Append an item to the array and return the lenght of the array.'
 );
 console.log(`[Push Method] Before: ${friends2}`);
-friends2.push("Mircea");
+friends2.push('Mircea');
 console.log(`[Push Method] After: ${friends2}`);
 
 /* Unshift an item to the array. */
-console.log("[Unshift Method] Syntax: array.unshift()");
+console.log('[Unshift Method] Syntax: array.unshift()');
 console.log(
-  "[Unshift Method] Insert an element to the beggining of the array and returns the new lenght of the array."
+  '[Unshift Method] Insert an element to the beggining of the array and returns the new lenght of the array.'
 );
 console.log(`[Unshift Method] Before: ${friends2}`);
-friends2.unshift("Cip");
+friends2.unshift('Cip');
 console.log(`[Unshift Method] After: ${friends2}`);
 
 /* Remove the last element from the array. */
-console.log("[Pop Method] Syntax: array.pop()");
+console.log('[Pop Method] Syntax: array.pop()');
 console.log(
-  "[Pop Method] Opposite to push method. Removes the last element from the array and returns it."
+  '[Pop Method] Opposite to push method. Removes the last element from the array and returns it.'
 );
 console.log(`[Pop Method] Before removing: ${friends2}`);
 friends2.pop();
@@ -255,10 +255,10 @@ console.log(`[Pop Method] After removing: ${friends2}`);
 
 /* Remove the first element from the array. */
 console.log(
-  "[Shift Method] Syntax: array.shift(). If array is empty, returns undefined."
+  '[Shift Method] Syntax: array.shift(). If array is empty, returns undefined.'
 );
 console.log(
-  "[Shift Method] Opposite to unshift method. Removes the first element from the array and returns it."
+  '[Shift Method] Opposite to unshift method. Removes the first element from the array and returns it.'
 );
 console.log(`[Shift Method] Before removing: ${friends2}`);
 friends2.shift();
@@ -270,12 +270,12 @@ console.log(
 );
 console.log(
   `[indexOf Method] Searching for Steven in the array. Found at position ${friends2.indexOf(
-    "Steven"
+    'Steven'
   )} in the array: ${friends2}`
 );
 console.log(
   `[indexOf Method] An index from which the method starts can be specified. Found at position ${friends2.indexOf(
-    "Peter",
+    'Peter',
     1
   )} in the array: ${friends2}`
 );
@@ -285,16 +285,16 @@ console.log(
   "[includes Method] Syntax: array.includes('searched_element', *optional* start_index)"
 );
 console.log(
-  "[includes Method] Search for an element in array. Returns true if found, false is not. Very important: This method does === comparison (no type coercion)."
+  '[includes Method] Search for an element in array. Returns true if found, false is not. Very important: This method does === comparison (no type coercion).'
 );
 console.log(
   `[includes Method] Searching for Steven in the array (${friends}). Found it: ${friends.includes(
-    "Steven"
+    'Steven'
   )}`
 );
 console.log(
   `[includes Method] Searching for peter in the array (${friends}). You can also specify position. Found it: ${friends.includes(
-    "peter",
+    'peter',
     1
   )}`
 );
@@ -312,66 +312,66 @@ console.log(
 // console.log(`Tips: ${tips}`);
 // console.log(`Totals: ${totals}`);
 
-console.log("################### Introduction to Objects ###################");
+console.log('################### Introduction to Objects ###################');
 console.log(
-  "In Objects, we define key-value pairs. An object is defined using the {} brackets. An array is defined using [] brackets."
+  'In Objects, we define key-value pairs. An object is defined using the {} brackets. An array is defined using [] brackets.'
 );
-console.log("Declaring an object with {} is called: literal syntax.");
+console.log('Declaring an object with {} is called: literal syntax.');
 
-console.log("Each key of an object is called a property.");
+console.log('Each key of an object is called a property.');
 
 const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedmann",
+  firstName: 'Jonas',
+  lastName: 'Schmedmann',
   age: 2024 - 1996,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"]
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
 };
 
-console.log("Jonas is an object. All items inside jonas are properties.");
+console.log('Jonas is an object. All items inside jonas are properties.');
 console.log(jonas);
 
-console.log("################### Dot vs Bracket Notation ###################");
+console.log('################### Dot vs Bracket Notation ###################');
 console.log(
-  "Getting a property from an object (jonas.lastName): ",
+  'Getting a property from an object (jonas.lastName): ',
   jonas.lastName
 );
 console.log(
   "Getting a property from an object using brackets (jonas['lastName']): ",
-  jonas["lastName"]
+  jonas['lastName']
 );
 console.log(
   "The big difference is that in the bracket [] notation, we can put any expression we like (jonas['first' + nameKey])."
 );
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
 
 const interestedIn = prompt(
-  "What do you want to know about Jonas? Chose between firstName, lastName, age, job and friends."
+  'What do you want to know about Jonas? Chose between firstName, lastName, age, job and friends.'
 );
 
 console.log(jonas.interestedIn);
 console.log(
-  "We get undefined when we are trying to access a property of an object that does not exist. Instead of dot notation, use expression."
+  'We get undefined when we are trying to access a property of an object that does not exist. Instead of dot notation, use expression.'
 );
 
 if (jonas[interestedIn]) {
   console.log(jonas[interestedIn]);
 } else {
-  console.log("Property requested does not exist.");
+  console.log('Property requested does not exist.');
 }
 
 console.log(
-  "################### Add new properties to the object. ###################"
+  '################### Add new properties to the object. ###################'
 );
 console.log(
   "You can add properties in two ways: jonas.location = 'Romania' or jonas['youtubeUser'] = 'Utii'"
 );
-console.log("Before adding: ", jonas);
-jonas.location = "Romania";
-jonas["youtubeUser"] = "Utii";
-console.log("After adding: ", jonas);
+console.log('Before adding: ', jonas);
+jonas.location = 'Romania';
+jonas['youtubeUser'] = 'Utii';
+console.log('After adding: ', jonas);
 
 // Challenge
 // Jonas has 3 friends, and his best friend is called Michael.
@@ -379,13 +379,13 @@ console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
 );
 
-console.log("################### Object Methods ###################");
+console.log('################### Object Methods ###################');
 const jonas1 = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
   birthYear: 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
   hasDriverLicense: true,
 
   // calcAge: function(birthYear) {
@@ -407,8 +407,8 @@ const jonas1 = {
   getSummary: function () {
     return `${this.firstName} is a ${this.calcAge()}-year old ${
       this.job
-    }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's licence.`;
-  }
+    }, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's licence.`;
+  },
 };
 
 // console.log("Jonas have: " + jonas1.calcAge(1991) + ' years!');
@@ -417,29 +417,29 @@ console.log(jonas.age);
 // Challenge - getSummary() method was created for this challenge.
 console.log(jonas1.getSummary());
 
-console.log("################### Coding Challenge #5 ###################");
+console.log('################### Coding Challenge #5 ###################');
 function calcBmi(mass, height) {
   return mass / (height * height);
 }
 
 const mark = {
-  fullName: "Mark Miller",
+  fullName: 'Mark Miller',
   mass: 78,
   height: 1.69,
   calcBMI: function () {
     this.bmi = this.mass / (this.height * this.height);
     return this.bmi;
-  }
+  },
 };
 
 const john = {
-  fullName: "John Smith",
+  fullName: 'John Smith',
   mass: 92,
   height: 1.95,
   calcBMI: function () {
     this.bmi = this.mass / (this.height * this.height);
     return this.bmi;
-  }
+  },
 };
 
 mark.calcBMI();
@@ -455,40 +455,40 @@ if (mark.bmi > john.bmi) {
   );
 }
 
-console.log("################### The for Loop ###################");
+console.log('################### The for Loop ###################');
 
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
 
 console.log(
-  "If the string is the same, it will not be printed x times. Instead, a small counter icon will appear in the Console Log."
+  'If the string is the same, it will not be printed x times. Instead, a small counter icon will appear in the Console Log.'
 );
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition 1.`);
 }
 
 console.log(
-  "################### Looping Arrays, Breaking and Continuing ###################"
+  '################### Looping Arrays, Breaking and Continuing ###################'
 );
 
 const jonasArray = [
-  "Jonas",
-  "Schmedtmann",
+  'Jonas',
+  'Schmedtmann',
   2024 - 1996,
-  "teacher",
-  ["Michael", "Peter", "Steven"]
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
 ];
 
 const types = [];
 
-console.log("Printing all items from an array...");
+console.log('Printing all items from an array...');
 for (let i = 0; i < jonasArray.length; i++) {
   console.log(jonasArray[i], typeof jonasArray[i]);
 
   // types[i] = typeof jonasArray[i];
   types.push(typeof jonasArray[i]);
-  console.log("Added type: ", types[i]);
+  console.log('Added type: ', types[i]);
 }
 
 console.log(types);
@@ -498,41 +498,41 @@ console.log(
 );
 
 for (let i = 0; i < jonasArray.length; i++) {
-  if (typeof jonasArray[i] !== "string") continue;
+  if (typeof jonasArray[i] !== 'string') continue;
   console.log(jonasArray[i], typeof [jonasArray[i]]);
 }
 
 console.log(
-  "[Break] Example. We will stop the loop when a number is found in the array."
+  '[Break] Example. We will stop the loop when a number is found in the array.'
 );
 
 for (let i = 0; i < jonasArray.length; i++) {
-  if (typeof jonasArray[i] === "number") break;
+  if (typeof jonasArray[i] === 'number') break;
   console.log(
     `Iteration #${i}: Element: ${jonasArray[i]}, type: ${typeof [
-      jonasArray[i]
+      jonasArray[i],
     ]}`
   );
 }
 
 console.log(
-  "################### Looping backwards and Loops in Loops ###################"
+  '################### Looping backwards and Loops in Loops ###################'
 );
 
 const jonasArray2 = [
-  "Jonas",
-  "Schmedtmann",
+  'Jonas',
+  'Schmedtmann',
   2024 - 1996,
-  "teacher",
-  ["Michael", "Peter", "Steven"]
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
 ];
 
-console.log("Looping backwards...");
+console.log('Looping backwards...');
 for (let i = jonasArray2.length - 1; i >= 0; i--) {
   console.log(jonasArray[i], typeof jonasArray[i]);
 }
 
-console.log("Nested loops...");
+console.log('Nested loops...');
 
 for (let exercise = 1; exercise < 4; exercise++) {
   console.log(`-------- Exercise ${exercise} --------`);
@@ -542,8 +542,8 @@ for (let exercise = 1; exercise < 4; exercise++) {
   }
 }
 
-console.log("################### While Loop ###################");
-console.log("[While Loop] Simple while loop example.");
+console.log('################### While Loop ###################');
+console.log('[While Loop] Simple while loop example.');
 let rep = 1;
 while (rep <= 10) {
   console.log(`Counter: ${rep}`);
@@ -551,7 +551,7 @@ while (rep <= 10) {
 }
 
 console.log(
-  "[While Loop] Another example of a while loop - rolling dice until hit 6."
+  '[While Loop] Another example of a while loop - rolling dice until hit 6.'
 );
 
 let dice = Math.trunc(Math.random() * 6) + 1;
@@ -560,7 +560,7 @@ while (dice !== 6) {
   console.log(`You rolled: ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
 
-  if (dice === 6) console.log("Loop will end. We hit 6!");
+  if (dice === 6) console.log('Loop will end. We hit 6!');
 }
 
 // Challenge #4
