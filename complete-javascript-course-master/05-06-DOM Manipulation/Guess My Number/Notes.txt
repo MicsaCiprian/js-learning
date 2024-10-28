@@ -1,0 +1,7 @@
+DOM - Document Object Model
+Structured Representation of HTML Documents. Allows Javascript to access HTML elements and styles to manipulate them.
+The DOM is automatically created by the browser as soon as the HTML page loads.
+
+
+DOM Methods and Properties are not Javascript, they come from the web APIs.
+Web APIs are like libraries that browser implement and can be accesses from Javascript code.
